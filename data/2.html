@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>FUCK WORLD · FUCKLIFE · FUCKRUSSIA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 30%, #0a0a0a, #000000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Impact', 'Arial Black', 'Helvetica Neue', 'Roboto Condensed', sans-serif;
+            letter-spacing: 0.03em;
+            padding: 1rem;
+        }
+
+        /* основной блок — ровная колонка */
+        .fuck-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(3px);
+            padding: 2.5rem 3rem;
+            border-radius: 4rem;
+            border: 1px solid rgba(255, 40, 40, 0.35);
+            box-shadow: 0 0 35px rgba(255, 0, 0, 0.2), 0 15px 35px rgba(0,0,0,0.6);
+            transition: all 0.2s ease;
+        }
+
+        /* каждая строка — отдельный элемент */
+        .fuck-line {
+            font-size: clamp(2.8rem, 12vw, 5.8rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ff3a3a 0%, #ff1a1a 45%, #cc0000 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5), 0 0 12px rgba(255,30,30,0.4);
+            white-space: nowrap;
+            transition: transform 0.2s, letter-spacing 0.2s;
+            line-height: 1.2;
+        }
+
+        /* лёгкий эффект при наведении — необязательно, но добавляет динамики */
+        .fuck-line:hover {
+            transform: scale(1.02);
+            letter-spacing: 0.02em;
+            text-shadow: 0 0 18px rgba(255,60,60,0.8);
+            cursor: default;
+        }
+
+        /* разная стилизация для каждой строки (необязательный нюанс) */
+        .line-1 {
+            background: linear-gradient(135deg, #ff5e5e, #e60000);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .line-2 {
+            background: linear-gradient(135deg, #ff7a3f, #e62e00);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        .line-3 {
+            background: linear-gradient(135deg, #ff3a3a, #b30000);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        /* маленький декоративный элемент (простой и агрессивный) */
+        .skull-mini {
+            margin-top: 0.8rem;
+            font-size: 1.5rem;
+            letter-spacing: 0.3rem;
+            color: #9e2a2a;
+            text-align: center;
+            opacity: 0.65;
+            font-family: monospace;
+        }
+
+        /* адаптив: на совсем узких экранах текст может переноситься, 
+           но мы используем white-space: nowrap и медиа запрос для меньшего отступа */
+        @media (max-width: 580px) {
+            .fuck-stack {
+                padding: 1.8rem 1.5rem;
+                gap: 0.9rem;
+                border-radius: 2rem;
+            }
+            .fuck-line {
+                font-size: clamp(2rem, 9vw, 4rem);
+            }
+            .skull-mini {
+                font-size: 1rem;
+            }
+        }
+
+        /* для очень маленьких телефонов (ширина <400px) — уменьшаем шрифт ещё */
+        @media (max-width: 420px) {
+            .fuck-line {
+                font-size: clamp(1.7rem, 7vw, 3.2rem);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fuck-stack">
+        <!-- столбик: три строки в точности как в запросе: 
+             "FUCK WORLD", "FUCKLIFE", "FUCKRUSSIA" -->
+        <div class="fuck-line line-1">FUCK WORLD</div>
+        <div class="fuck-line line-2">FUCKLIFE</div>
+        <div class="fuck-line line-3">FUCKRUSSIA</div>
+    </div>
+</body>
+</html>
