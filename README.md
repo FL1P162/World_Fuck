@@ -1,4 +1,5 @@
-
+### Telegram Channel - https://t.me/Worldfuckpython
+### Dowload python - https://www.python.org/downloads/release/python-3130/
 
 ### version 0.1.0
 
